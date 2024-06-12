@@ -100,7 +100,11 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "repo": "https://github.com/venus-kevin807/Mi-portafolio-Kevin-Castro.git",
+            "branch": "gh-pages"
+          }
         }
       }
     }
