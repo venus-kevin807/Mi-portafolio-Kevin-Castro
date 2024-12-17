@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  menuVisible: boolean = false;
 
+  // Alternar visibilidad del menú
+  toggleMenu(): void {
+    this.menuVisible = !this.menuVisible;
+  }
 }

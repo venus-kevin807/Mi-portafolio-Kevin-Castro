@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AboutMeComponent {
   downloadCV() {
     const link = document.createElement('a');
-    link.href = 'assets/RESUME KEVIN CASTRO.pdf';
-    link.download = 'RESUME KEVIN CASTRO.pdf';
+    link.href = 'assets/CVKEVIN.pdf';
+    link.download = 'CVKEVIN.pdf';
     link.target = '_blank';
     link.click();
   }

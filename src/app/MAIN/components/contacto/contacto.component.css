@@ -1,29 +1,35 @@
-.contacto{
+.contacto {
   background-color: #1e2326;
   color: #fff;
   padding: 50px 20px;
-  width: 100vw; /* Cambiado a 100vw para ocupar todo el ancho de la pantalla */
+  width: 100vw;
   min-height: 100vh;
 }
-.contacto .contenido-seccion{
+
+.contacto .contenido-seccion {
   max-width: 1100px;
   margin: auto;
 }
-.contacto h2{
+
+.contacto h2 {
   font-size: 48px;
   font-family: 'Righteous';
   text-align: center;
   padding: 20px 0;
 }
-.contacto .fila{
+
+.contacto .fila {
   display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
 }
-.contacto .col{
+
+.contacto .col {
   width: 50%;
   padding: 10px;
   position: relative;
 }
-.contacto .col input, .contacto .col textarea{
+
+.contacto .col input, .contacto .col textarea {
   display: block;
   width: 100%;
   padding: 18px;
@@ -33,7 +39,8 @@
   color: #fff;
   font-size: 18px;
 }
-.contacto button{
+
+.contacto button {
   cursor: pointer;
   background-color: transparent;
   border: 2px solid #fff;
@@ -46,7 +53,8 @@
   position: relative;
   z-index: 10;
 }
-.contacto button .overlay{
+
+.contacto button .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -56,13 +64,16 @@
   z-index: -1;
   transition: 1s;
 }
-.contacto button:hover .overlay{
+
+.contacto button:hover .overlay {
   width: 100%;
 }
-.contacto .col img{
+
+.contacto .col img {
   width: 100%;
 }
-.contacto .col .info{
+
+.contacto .col .info {
   position: absolute;
   top: 40%;
   background-color: #252A2E;
@@ -71,14 +82,40 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.contacto .col .info ul{
+
+.contacto .col .info ul {
   list-style: none;
 }
-.contacto .col .info ul li{
+
+.contacto .col .info ul li {
   margin-bottom: 20px;
 }
-.contacto .col .info ul li i{
+
+.contacto .col .info ul li i {
   color: #1CB698;
   display: inline-block;
   margin-right: 20px;
+}
+
+/* Media Query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .contacto .fila {
+    flex-direction: column; /* Cambia la dirección a columna */
+  }
+
+  .contacto .col {
+    width: 100%; /* Ocupa todo el ancho */
+    margin-bottom: 20px; /* Añade espacio entre elementos */
+  }
+
+  .contacto .col .info {
+    position: static; /* Quita el posicionamiento absoluto */
+    transform: none; /* Elimina la transformación */
+    max-width: 100%; /* Ocupa todo el ancho */
+    margin: 20px 0; /* Añade márgenes */
+  }
+
+  .contacto h2 {
+    font-size: 36px; /* Reduce el tamaño del título */
+  }
 }

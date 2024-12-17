@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "mi-portafolio-ea24c",
+    "public": "dist/mi-portafolio/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
