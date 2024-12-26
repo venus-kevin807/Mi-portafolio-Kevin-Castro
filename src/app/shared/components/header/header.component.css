@@ -8,6 +8,23 @@
   z-index: 99;
 }
 
+/* Estilo para el enlace activo */
+.contenedor-header header nav ul li a.active {
+  color: #1CB698; /* Color del texto activo */
+  position: relative; /* Necesario para la línea */
+}
+
+.contenedor-header header nav ul li a.active::after {
+  content: ""; /* Elemento decorativo */
+  position: absolute;
+  bottom: -5px; /* Ubicación debajo del texto */
+  left: 0;
+  width: 100%; /* Abarcar todo el ancho del enlace */
+  height: 3px; /* Grosor de la línea */
+  background-color: #1CB698; /* Color de la línea */
+}
+
+
 .contenedor-header header {
   max-width: 1100px;
   margin: auto;

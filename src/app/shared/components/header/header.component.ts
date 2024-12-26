@@ -12,4 +12,9 @@ export class HeaderComponent {
   toggleMenu(): void {
     this.menuVisible = !this.menuVisible;
   }
+
+  // Cerrar el menú
+  closeMenu(): void {
+    this.menuVisible = false;
+  }
 }
